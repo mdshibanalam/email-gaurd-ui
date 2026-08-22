@@ -23,7 +23,7 @@ function App() {
     e.preventDefault()
     if (!singleEmail) return
     try {
-      const res = await fetch(`https://email-gaurd-api.onrender.com=${encodeURIComponent(singleEmail)}`)
+      const res = await fetch(`https://email-gaurd-api.onrender.com/api/status=${encodeURIComponent(singleEmail)}`)
       const data = await res.json()
       setSingleResult(data)
     } catch (err) {
@@ -41,7 +41,7 @@ function App() {
     formData.append('file', file)
 
     try {
-      const response = await fetch('https://email-gaurd-api.onrender.com', { method: 'POST', body: formData })
+      const response = await fetch('https://email-gaurd-api.onrender.com/api/status', { method: 'POST', body: formData })
       const data = await response.json()
       setResult(data)
       setStatus('Analysis complete.')
