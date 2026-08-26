@@ -113,12 +113,30 @@ body {
 .card h3 { margin-top: 0; margin-bottom: 1.5rem; }
 
 .input-group, .upload-form { display: flex; gap: 10px; flex-direction: column; }
+
 input[type="email"], .file-input {
-  padding: 10px;
+  padding: 12px;
   border: 1px solid var(--border);
-  border-radius: 4px;
-  background: var(--bg-color);
+  border-radius: 6px;
+  background: var(--card-bg);
   color: var(--text-primary);
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+input[type="email"]:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+input[type="email"]:-webkit-autofill,
+input[type="email"]:-webkit-autofill:hover, 
+input[type="email"]:-webkit-autofill:focus, 
+input[type="email"]:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px var(--card-bg) inset !important;
+  -webkit-text-fill-color: var(--text-primary) !important;
+  transition: background-color 5000s ease-in-out 0s;
 }
 
 .primary-btn, .secondary-btn {
