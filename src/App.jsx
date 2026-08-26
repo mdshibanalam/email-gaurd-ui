@@ -127,7 +127,8 @@ function App() {
           <div className="card">
             <h3>Bulk Validation</h3>
             <form onSubmit={handleBulkUpload} className="upload-form">
-              <input type="file" onChange={(e) => setFile(e.target.files[0])} className="file-input" accept=".csv,.txt" />
+              {/* Replace the old input with this one */}
+              <input type="file" onChange={handleFileChange} className="file-input" accept=".csv,.txt" />
               <button type="submit" className="primary-btn" disabled={!file || isProcessing}>
                 {isProcessing ? 'Processing...' : 'Upload & Scan'}
               </button>
