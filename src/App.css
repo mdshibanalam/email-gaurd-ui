@@ -114,13 +114,14 @@ body {
 
 .input-group, .upload-form { display: flex; gap: 10px; flex-direction: column; }
 
+/* Base Input Styling - Scaled Down */
 input[type="email"], .file-input {
-  padding: 12px;
+  padding: 10px; /* Reduced from 12px */
   border: 1px solid var(--border);
   border-radius: 6px;
   background: var(--card-bg);
   color: var(--text-primary);
-  font-size: 1rem;
+  font-size: 0.9rem; /* Reduced from 1rem for a sleeker look */
   outline: none;
   transition: all 0.2s ease;
 }
