@@ -133,7 +133,7 @@ function App() {
                 </div>
                 <div className="download-options">
                   <button onClick={() => downloadCSV('unified')} className="secondary-btn">Download Unified CSV</button>
-                  <button onClick={() => downloadCSV('valid')} className="secondary-btn outline">Only Valid</button>
+                  <button onClick={() => downloadCSV('valid')} className="secondary-btn success">Only Valid</button>
                   <button onClick={() => downloadCSV('invalid')} className="secondary-btn outline danger">Only Invalid</button>
                 </div>
               </div>
