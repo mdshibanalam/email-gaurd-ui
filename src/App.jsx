@@ -31,6 +31,15 @@ function App() {
     }
   }
 
+  const handleFileChange = (e) => {
+    const selectedFile = e.target.files[0]
+    if (selectedFile) {
+      setFile(selectedFile)
+      setStatus(`📄 ${selectedFile.name} selected.`)
+      setResult(null) // Resets the dashboard for a new file
+    }
+  }
+
   const handleBulkUpload = async (e) => {
     e.preventDefault()
     if (!file) return
