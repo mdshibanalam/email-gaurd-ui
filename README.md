@@ -1,16 +1,25 @@
-# React + Vite
+# 🛡️ EmailGuard - React Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+The modern, client-facing web interface for the EmailGuard SaaS platform. Built with React and Vite, it allows users to instantly validate single emails or upload bulk lists, generating downloadable CSV reports directly in the browser's memory.
 
-Currently, two official plugins are available:
+## 🚀 Live Application
+**Live Link:** `https://email-gaurd-ui.vercel.app`
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ✨ Features
+*   **Tabbed Workspace:** Seamlessly toggle between "Single Check" and "Bulk Upload" modes.
+*   **Dynamic Theme Toggling:** Fully engineered Light and Dark modes using CSS variables.
+*   **Client-Side File Generation:** Instantly creates and downloads unified or separated CSV reports directly from memory, reducing server load.
+*   **Modern UI/UX:** Built with custom glassmorphism effects, responsive hover states, and accessible contrast ratios.
 
-## React Compiler
+## 💻 Tech Stack
+*   **Framework:** React (Functional Components, Hooks)
+*   **Build Tool:** Vite
+*   **Styling:** Custom Vanilla CSS3 (CSS Variables, Flexbox, Animations)
+*   **Deployment:** Vercel
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## 🛠️ Local Setup
+1. Clone the repository: `git clone https://github.com/mdshibanalam/email-guard-ui.git`
+2. Navigate to the project directory: `cd email-guard-ui`
+3. Install dependencies: `npm install`
+4. Start the development server: `npm run dev`
+5. The application will run on `http://localhost:5173`
