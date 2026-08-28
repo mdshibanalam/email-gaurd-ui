@@ -35,8 +35,11 @@ function App() {
     const selectedFile = e.target.files[0]
     if (selectedFile) {
       setFile(selectedFile)
-      setStatus(`📄 ${selectedFile.name} selected.`)
-      setResult(null) // Resets the dashboard for a new file
+      const fileName = selectedFile.name.length > 20 
+        ? selectedFile.name.substring(0, 17) + '...' 
+        : selectedFile.name
+      setStatus(`📄 ${fileName} selected.`)
+      setResult(null)
     }
   }
 
@@ -87,7 +90,6 @@ function App() {
   return (
     <div className="app-container">
       <header className="header">
-        {/* Left Section: Logo */}
         <div className="header-section header-left">
           <div className="logo">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
@@ -95,15 +97,29 @@ function App() {
           </div>
         </div>
 
-        {/* Center Section: Navigation Tabs */}
         <div className="header-section header-center">
-          <button className={`tab-btn ${activeTab === 'single' ? 'active' : ''}`} onClick={() => setActiveTab('single')}>Single Check</button>
-          <button className={`tab-btn ${activeTab === 'bulk' ? 'active' : ''}`} onClick={() => setActiveTab('bulk')}>Bulk Upload</button>
+          <button 
+            className={`tab-btn ${activeTab === 'single' ? 'active' : ''}`} 
+            onClick={() => setActiveTab('single')}
+            aria-label="Single email check"
+          >
+            Single
+          </button>
+          <button 
+            className={`tab-btn ${activeTab === 'bulk' ? 'active' : ''}`} 
+            onClick={() => setActiveTab('bulk')}
+            aria-label="Bulk email upload"
+          >
+            Bulk
+          </button>
         </div>
 
-        {/* Right Section: Theme Controls */}
         <div className="header-section header-right">
-          <button className="theme-toggle" onClick={toggleTheme}>
+          <button 
+            className="theme-toggle" 
+            onClick={toggleTheme}
+            aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
+          >
             {theme === 'light' ? '🌙' : '☀️'}
           </button>
         </div>
@@ -114,8 +130,15 @@ function App() {
           <div className="card">
             <h3>Verify Single Email</h3>
             <form onSubmit={handleSingleCheck} className="input-group">
-              <input type="email" placeholder="john@example.com" value={singleEmail} onChange={(e) => setSingleEmail(e.target.value)} required />
-              <button type="submit" className="primary-btn">Check</button>
+              <input 
+                type="email" 
+                placeholder="john@example.com" 
+                value={singleEmail} 
+                onChange={(e) => setSingleEmail(e.target.value)} 
+                required 
+                aria-label="Email address"
+              />
+              <button type="submit" className="primary-btn">Check Email</button>
             </form>
             {singleResult && (
               <div className={`result-badge ${singleResult.status.toLowerCase()}`}>
@@ -127,8 +150,13 @@ function App() {
           <div className="card">
             <h3>Bulk Validation</h3>
             <form onSubmit={handleBulkUpload} className="upload-form">
-              {/* Replace the old input with this one */}
-              <input type="file" onChange={handleFileChange} className="file-input" accept=".csv,.txt" />
+              <input 
+                type="file" 
+                onChange={handleFileChange} 
+                className="file-input" 
+                accept=".csv,.txt"
+                aria-label="Upload CSV or TXT file"
+              />
               <button type="submit" className="primary-btn" disabled={!file || isProcessing}>
                 {isProcessing ? 'Processing...' : 'Upload & Scan'}
               </button>
