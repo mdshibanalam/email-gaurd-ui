@@ -117,7 +117,7 @@ body {
   border-radius: 12px;
   border: 1px solid var(--border);
   width: 100%;
-  max-width: 500px;
+  max-width: 100%;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
 }
 
@@ -305,8 +305,134 @@ input[type="email"]:-webkit-autofill:active {
   }
 }
 
-/* Laptops (1024px - 1279px) */
-@media (min-width: 1024px) and (max-width: 1279px) {
+/* Small tablets (768px - 899px) */
+@media (min-width: 768px) and (max-width: 899px) {
+  .header {
+    padding: 0.875rem 2rem;
+  }
+  
+  .logo h2 {
+    font-size: 1.05rem;
+  }
+  
+  .tab-btn {
+    padding: 10px 18px;
+    font-size: 0.85rem;
+  }
+  
+  .main-content {
+    padding: 2.5rem 1.5rem;
+  }
+  
+  .card {
+    max-width: 100%;
+    width: 100%;
+    padding: 1.75rem;
+  }
+  
+  .card h3 {
+    font-size: 1.15rem;
+  }
+  
+  .stat strong {
+    font-size: 1.35rem;
+  }
+}
+
+/* Medium tablets (900px - 1023px) */
+@media (min-width: 900px) and (max-width: 1023px) {
+  .header {
+    padding: 1rem 2.5rem;
+  }
+  
+  .logo h2 {
+    font-size: 1.1rem;
+  }
+  
+  .logo svg {
+    width: 22px;
+    height: 22px;
+  }
+  
+  .tab-btn {
+    padding: 11px 20px;
+    font-size: 0.875rem;
+  }
+  
+  .main-content {
+    padding: 3rem 2rem;
+  }
+  
+  .card {
+    max-width: 100%;
+    width: 100%;
+    padding: 2rem;
+  }
+  
+  .card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1.25rem;
+  }
+  
+  .stat-grid {
+    gap: 16px;
+    margin: 18px 0;
+  }
+  
+  .stat {
+    padding: 14px 10px;
+  }
+  
+  .stat span {
+    font-size: 0.8rem;
+  }
+  
+  .stat strong {
+    font-size: 1.4rem;
+  }
+  
+  .result-badge {
+    padding: 11px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Large tablets (1024px - 1199px) */
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .header {
+    padding: 1rem 3%;
+  }
+  
+  .logo h2 {
+    font-size: 1.1rem;
+  }
+  
+  .tab-btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+  
+  .main-content {
+    padding: 3rem 2rem;
+  }
+  
+  .card {
+    max-width: 100%;
+    width: 100%;
+    padding: 2rem;
+  }
+  
+  .card h3 {
+    font-size: 1.2rem;
+  }
+  
+  .stat strong {
+    font-size: 1.4rem;
+  }
+}
+
+/* Small laptops (1200px - 1279px) */
+@media (min-width: 1200px) and (max-width: 1279px) {
   .header {
     padding: 0.875rem 3%;
   }
@@ -316,7 +442,7 @@ input[type="email"]:-webkit-autofill:active {
   }
   
   .card {
-    max-width: 480px;
+    max-width: 100%;
     padding: 1.75rem;
   }
 }
@@ -332,7 +458,7 @@ input[type="email"]:-webkit-autofill:active {
   }
   
   .card {
-    max-width: 500px;
+    max-width: 100%;
     padding: 2rem;
   }
   
@@ -357,7 +483,7 @@ input[type="email"]:-webkit-autofill:active {
   }
   
   .card {
-    max-width: 520px;
+    max-width: 100%;
     padding: 2.25rem;
   }
   
