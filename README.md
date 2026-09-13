@@ -5,6 +5,11 @@ The modern, client-facing web interface for the EmailGuard SaaS platform. Built 
 ## 🚀 Live Application
 **Live Link:** `https://email-gaurd-ui.vercel.app`
 
+*This client interface is powered by a custom REST API;
+View the backend repository codebase here:*
+
+`https://github.com/mdshibanalam/email-gaurd-api`
+
 ## ✨ Features
 *   **Tabbed Workspace:** Seamlessly toggle between "Single Check" and "Bulk Upload" modes.
 *   **Dynamic Theme Toggling:** Fully engineered Light and Dark modes using CSS variables.
