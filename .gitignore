@@ -10,6 +10,8 @@ lerna-debug.log*
 node_modules
 dist
 dist-ssr
+DESIGN.md
+PLAN.md
 *.local
 DESIGN.md
 PLAN.md

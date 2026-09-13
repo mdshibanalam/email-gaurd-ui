@@ -117,7 +117,7 @@ body {
   border-radius: 12px;
   border: 1px solid var(--border);
   width: 100%;
-  max-width: 500px;
+  max-width: 100%;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
 }
 
@@ -305,58 +305,202 @@ input[type="email"]:-webkit-autofill:active {
   }
 }
 
-/* Tablets and up (768px+) */
-@media (min-width: 768px) {
+/* Small tablets (768px - 899px) */
+@media (min-width: 768px) and (max-width: 899px) {
+  .header {
+    padding: 0.875rem 2rem;
+  }
+  
+  .logo h2 {
+    font-size: 1.05rem;
+  }
+  
+  .tab-btn {
+    padding: 10px 18px;
+    font-size: 0.85rem;
+  }
+  
+  .main-content {
+    padding: 2.5rem 1.5rem;
+  }
+  
+  .card {
+    max-width: 100%;
+    width: 100%;
+    padding: 1.75rem;
+  }
+  
+  .card h3 {
+    font-size: 1.15rem;
+  }
+  
+  .stat strong {
+    font-size: 1.35rem;
+  }
+}
+
+/* Medium tablets (900px - 1023px) */
+@media (min-width: 900px) and (max-width: 1023px) {
+  .header {
+    padding: 1rem 2.5rem;
+  }
+  
+  .logo h2 {
+    font-size: 1.1rem;
+  }
+  
+  .logo svg {
+    width: 22px;
+    height: 22px;
+  }
+  
+  .tab-btn {
+    padding: 11px 20px;
+    font-size: 0.875rem;
+  }
+  
+  .main-content {
+    padding: 3rem 2rem;
+  }
+  
+  .card {
+    max-width: 100%;
+    width: 100%;
+    padding: 2rem;
+  }
+  
+  .card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1.25rem;
+  }
+  
+  .stat-grid {
+    gap: 16px;
+    margin: 18px 0;
+  }
+  
+  .stat {
+    padding: 14px 10px;
+  }
+  
+  .stat span {
+    font-size: 0.8rem;
+  }
+  
+  .stat strong {
+    font-size: 1.4rem;
+  }
+  
+  .result-badge {
+    padding: 11px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Large tablets (1024px - 1199px) */
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .header {
+    padding: 1rem 3%;
+  }
+  
+  .logo h2 {
+    font-size: 1.1rem;
+  }
+  
+  .tab-btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+  
+  .main-content {
+    padding: 3rem 2rem;
+  }
+  
+  .card {
+    max-width: 100%;
+    width: 100%;
+    padding: 2rem;
+  }
+  
+  .card h3 {
+    font-size: 1.2rem;
+  }
+  
+  .stat strong {
+    font-size: 1.4rem;
+  }
+}
+
+/* Small laptops (1200px - 1279px) */
+@media (min-width: 1200px) and (max-width: 1279px) {
+  .header {
+    padding: 0.875rem 3%;
+  }
+  
+  .main-content {
+    padding: 3rem 1.5rem;
+  }
+  
+  .card {
+    max-width: 100%;
+    padding: 1.75rem;
+  }
+}
+
+/* Desktops (1280px - 1535px) */
+@media (min-width: 1280px) and (max-width: 1535px) {
+  .header {
+    padding: 1rem 4%;
+  }
+  
+  .main-content {
+    padding: 3.5rem 2rem;
+  }
+  
+  .card {
+    max-width: 100%;
+    padding: 2rem;
+  }
+  
+  .tab-btn {
+    font-size: 0.85rem;
+    padding: 8px 18px;
+  }
+  
+  .logo h2 {
+    font-size: 1.1rem;
+  }
+}
+
+/* Large desktops (1536px+) */
+@media (min-width: 1536px) {
   .header {
     padding: 1rem 5%;
+  }
+  
+  .main-content {
+    padding: 4rem 2rem;
+  }
+  
+  .card {
+    max-width: 100%;
+    padding: 2.25rem;
+  }
+  
+  .tab-btn {
+    font-size: 0.9rem;
+    padding: 10px 22px;
   }
   
   .logo h2 {
     font-size: 1.2rem;
   }
   
-  .logo svg {
-    width: 24px;
-    height: 24px;
-  }
-  
-  .tab-btn {
-    padding: 10px 20px;
-    font-size: 0.95rem;
-  }
-  
-  .main-content {
-    padding: 4rem 1rem;
-  }
-  
-  .card {
-    padding: 2rem;
-  }
-  
   .card h3 {
-    font-size: 1.25rem;
-    margin-bottom: 1.5rem;
-  }
-  
-  .stat-grid {
-    gap: 20px;
-    margin: 20px 0;
-  }
-  
-  .stat {
-    padding: 15px;
-  }
-  
-  .stat span {
-    font-size: 0.9rem;
+    font-size: 1.2rem;
   }
   
   .stat strong {
-    font-size: 1.5rem;
-  }
-  
-  .result-badge {
-    padding: 10px;
-    font-size: 1rem;
+    font-size: 1.4rem;
   }
 }

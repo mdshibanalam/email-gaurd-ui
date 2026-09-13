@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import './App.css'
 
 function App() {
-  const [theme, setTheme] = useState('light')
+  const [theme, setTheme] = useState('dark')
   const [activeTab, setActiveTab] = useState('single')
   
   const [singleEmail, setSingleEmail] = useState('')
